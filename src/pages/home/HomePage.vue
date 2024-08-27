@@ -1,23 +1,31 @@
 <script setup>
-import Navbar from '@/components/Navbar.vue';
+import AboutUsSection from './AboutUsSection.vue';
+import ContactSection from './ContactSection.vue';
+
 </script>
 <template>
-    <section class="video-container">
+    <section id="home" class="video-container">
         <video autoplay muted loop>
             <source src="@/assets/videos/1992-153555258_small.mp4" type="video/mp4" />
         </video>
         <div class="caption bg-gradient-to-r from-transparent to-slate-700 p-20">
-            <h1 class="text-center text-4xl font-extrabold text-white mt-20">Optimiza tu negocio. Soluciones a medida.
+            <h1 class="text-center text-4xl font-extrabold text-white mt-20">Optimiza tu negocio. Soluciones a
+                medida.
             </h1>
-            <p class="mt-6 text-lg text-slate-400 text-center mb-20">Soluciones informáticas que se adaptan a tu
+            <p class="mt-6 text-lg text-white text-center mb-20">Soluciones informáticas que se adaptan a tu
                 negocio. ¿Una idea en mente? Contáctanos.</p>
             <div class="flex flex-row justify-center">
-                <RouterLink :to="'/contact'"
+                <a :href="'#contact'"
                     class="rounded-lg bg-orange-400 px-6 py-3 text-white font-extrabold hover:bg-indigo-600 hover:scale-110 duration-300">
-                    Contactar</RouterLink>
+                    Contactar</a>
             </div>
         </div>
     </section>
+
+    <ContactSection></ContactSection>
+    <AboutUsSection></AboutUsSection>
+
+
 </template>
 
 <style scoped>
